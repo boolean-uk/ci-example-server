@@ -1,4 +1,3 @@
-// Load our .env file
 require('dotenv').config();
 
 const express = require('express');
@@ -10,7 +9,7 @@ app.disable('x-powered-by');
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan)
+app.use(morgan('combined'))
 
 const guestBookRouter = require('./routers/guestbook');
 app.use('/guestbook', guestBookRouter);
