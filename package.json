@@ -10,7 +10,9 @@
     "morgan": "^1.10.0"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "npx prisma migrate deploy"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
